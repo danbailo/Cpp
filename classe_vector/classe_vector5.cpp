@@ -20,7 +20,9 @@ int main(int argc, char const *argv[]){
     vector<Ponto*> vetor;
     vector<Ponto*>::iterator it;
     
+    vector<Ponto> vetor2;
     Ponto p4(1,2);
+    vetor2.push_back(p4);
     
     Ponto* p1 = new Ponto(1,2);
     Ponto* p2 = new Ponto(3,4);
