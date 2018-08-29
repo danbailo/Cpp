@@ -1,0 +1,12 @@
+/tmp/ccwdc3R2.o: na função `main':
+main.cpp:(.text+0x27): referência indefinida para `Pilha::Pilha()'
+main.cpp:(.text+0x33): referência indefinida para `Pilha::vazia()'
+main.cpp:(.text+0x6c): referência indefinida para `Pilha::empilhar(int)'
+main.cpp:(.text+0x7d): referência indefinida para `Pilha::empilhar(int)'
+main.cpp:(.text+0x8e): referência indefinida para `Pilha::empilhar(int)'
+main.cpp:(.text+0x9a): referência indefinida para `Pilha::desempilhar()'
+main.cpp:(.text+0xa6): referência indefinida para `Pilha::GetTopo()'
+main.cpp:(.text+0xda): referência indefinida para `Pilha::vazia()'
+main.cpp:(.text+0x113): referência indefinida para `Pilha::~Pilha()'
+main.cpp:(.text+0x135): referência indefinida para `Pilha::~Pilha()'
+collect2: error: ld returned 1 exit status

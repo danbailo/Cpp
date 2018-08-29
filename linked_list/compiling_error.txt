@@ -1,0 +1,9 @@
+/tmp/ccvaS5Ls.o: na função `main':
+main.cpp:(.text+0x26): referência indefinida para `List::List()'
+main.cpp:(.text+0x37): referência indefinida para `List::AddNode(int)'
+main.cpp:(.text+0x48): referência indefinida para `List::AddNode(int)'
+main.cpp:(.text+0x59): referência indefinida para `List::AddNode(int)'
+main.cpp:(.text+0x65): referência indefinida para `List::PrintList()'
+main.cpp:(.text+0x71): referência indefinida para `List::getHead()'
+main.cpp:(.text+0x7d): referência indefinida para `List::getCurr()'
+collect2: error: ld returned 1 exit status
