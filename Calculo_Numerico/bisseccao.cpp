@@ -1,37 +1,39 @@
-#include <iostream>
-#include <math.h>
 #include <stdio.h>
+#include <cmath>
 
 using namespace std;
 
 double f(double x){
-    return exp(x*log(x))*pow(x,3)-(9*x)+3;
+    return pow(x,3)+x-1000;
 }
-double flinha(double x){
-    return f(x+1e-12)-(f(x))/1e-12;
-}
-int main(int argc, char const *argv[]){       
+
+int main(int argc, char const *argv[]){
+
     double a,b,e,x;
-    a=0.0;
-    b=1.0;
-    x=(a+b)/2.0;
-    e=0.001;
-    int k=0;
-    // while(fabs(f(x))>=e){ //y
-    while((b-a)>=e){ //x
-        if(f(x)>=0){
-            a=x;
+
+    
+    a = 8.0;
+    b = 10.0;
+    e = 0.01;
+    int k = 0;
+    if((f(a)*f(b)) <= 0){
+        while(fabs(b-a) > e){
+            x = (a+b)/2.0;
+            if((f(a)*f(b)) <= 0){
+                a = x;
+                // cout << a << "\n";
+            }
+            else{
+                b = x;
+                // cout << "b: " << b << "\n";
+            }
+            k++;
         }
-        else{
-            b=x;
-        }
-        x=(a+b)/2.0;
-        printf("x(%i)=%lf\n",k,x);
-        k++;
+        printf("A raiz do intervalo é %e\n", x);
+        printf("Iterações: %d\n",k);
+        return 0;
     }
-    printf("xbarra=%lf\n",x);
-    printf("f(xbarra)=%lf\n",f(x));
-
-
+    printf("Não há raizes no intervalo dado\n");
+    
     return 0;
 }

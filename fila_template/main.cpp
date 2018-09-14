@@ -1,22 +1,99 @@
 #include <iostream>
 #include "fila.h"
 
-using namespace std;
+int main(int argc, char *argv[])
+{
+	Fila<double> f1;
 
-int main(int argc, char const *argv[]) {
+	cout << "ANTES de inserir elementos...\n";
 
-  Fila<int> F;
+	if(f1.vazia())
+		cout << "Fila vazia!!\n";
+	else
+		cout << "Fila NAO vazia!!\n";
 
-  F.insereNo(7);
-  F.insereNo(11);
-  F.insereNo(23);
-  F.printFila();
-  F.getInicio();
-  F.getFim();
-  F.removeNo();
-  F.removeNo();
-  // F.removeNo();
-  F.printFila();
+	try
+	{
+		double e = f1.remover();
+		cout << "Removido o elemento: " << e << endl;
+	}
+	catch(const char* msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
 
-  return 0;
+	f1.inserir(5.67);
+	f1.inserir(9.23);
+	f1.inserir(1.45);
+
+	cout << "\nDEPOIS de inserir elementos...\n";
+
+	if(f1.vazia())
+		cout << "Fila vazia!!\n";
+	else
+		cout << "Fila NAO vazia!!\n";
+
+	try
+	{
+		cout << "Elemento da frente: " << f1.frente() << endl;
+	}
+	catch(const char * msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+
+	try
+	{
+		cout << "Elemento do final: " << f1.final() << endl;
+	}
+	catch(const char * msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+
+	try
+	{
+		double e = f1.remover();
+		cout << "Removido o elemento: " << e << endl;
+	}
+	catch(const char* msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+
+	try
+	{
+		cout << "Elemento da frente: " << f1.frente() << endl;
+	}
+	catch(const char * msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+
+	Fila<string> f2;
+
+	f2.inserir("c++");
+	f2.inserir("python");
+	f2.inserir("ruby");
+	cout << "\n\nFila de strings...\n";
+
+	try
+	{
+		cout << "Elemento da frente: " << f2.frente() << endl;
+	}
+	catch(const char* msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	try
+	{
+		cout << "Elemento do final: " << f2.final() << endl;
+	}
+	catch(const char* msg)
+	{
+		cerr << "Erro: " << msg << endl;
+	}
+
+	return 0;
 }
